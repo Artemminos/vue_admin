@@ -1,0 +1,119 @@
+@import "../icons/icons";
+
+.sidebar {
+  margin: 0;
+  padding: 21px;
+  width: 200px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  background-color: #0F1642;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.170509);
+
+  &__logo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+    &-title {
+      img {
+        margin-right: 10px;
+      }
+
+      span {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 27px;
+        color: #7E72F2;
+        bottom: 5px;
+        position: relative;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    &__link {
+      padding: 0 13px;
+      font-size: 15px;
+      line-height: 40px;
+      color: #FFFFFF;
+      text-decoration: none;
+
+      &:hover {
+        background: linear-gradient(224.53deg, #9E94FF 0%, #7E72F2 99.2%);
+        box-shadow: -1px 1px 8px rgba(126, 114, 242, 0.578726);
+        border-radius: 4px;
+      }
+
+      &__active {
+        background: linear-gradient(224.53deg, #9E94FF 0%, #7E72F2 99.2%);
+        box-shadow: -1px 1px 8px rgba(126, 114, 242, 0.578726);
+        border-radius: 4px;
+      }
+    }
+
+    &__select {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      height: 40px;
+      transition: all ease-in-out 0.5s;
+      margin-bottom: 15px;
+
+      &__title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 40px;
+        color: #FFFFFF;
+        cursor: pointer;
+
+        &::before {
+          content: $home;
+          background-repeat: no-repeat;
+          margin-right: 10px;
+        }
+      }
+
+      &::after {
+        content: $arrow;
+        position: absolute;
+        right: 37px;
+        margin-top: 10px;
+        transform: rotate(-90deg);
+        transition: all ease-in-out 0.5s;
+      }
+    }
+
+    .arrow_active {
+      height: 120px;
+      transition: all 0.5s;
+      animation: active;
+
+      &::after {
+        transform: rotate(0deg) !important;
+        transition: all ease-in-out 0.5s;
+      }
+    }
+
+
+    &__group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      &__title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 40px;
+        color: #FFFFFF;
+      }
+
+    }
+  }
+}

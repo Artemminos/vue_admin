@@ -1,0 +1,19 @@
+$white_oval: url('../assets/Oval_white.svg');
+$home: url('../assets/home.svg');
+$arrow: url('../assets/arrow.svg');
+$email: url('../assets/email.svg');
+.email_icon {
+  &::before {
+    content: $email;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+  }
+}
+
+.white_oval_icon {
+  &::before {
+    content: $white_oval;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+  }
+}
